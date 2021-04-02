@@ -14,13 +14,11 @@ You will need to be somewhat familiar with basic linux commands to navigate Dalm
 
 **If you do not complete the above two steps, you will be unable to do any of the remaining steps.**
 
-3) Add the participant to the "MRI_Participant_INFO" document.
+3) Add the MRI number and sharing info under "MRI Information" to the NELLAB-AD Participants document.
 
-4) Add the MRI number and sharing info under "MRI Information" to the NELLAB-AD Participants Google Sheet.
+4) Make sure you have a Matlab version beyond 2016a installed on your MAC.
 
-5) Make sure you have a Matlab version beyond 2016a installed on your MAC.
-
-6) Make sure that you have the following 2 Drives mounted on your computer:
+5) Make sure that you have the following 2 Drives mounted on your computer:
 
 	smb://rcsfileshare.abudhabi.nyu.edu/mri-nellab
 
@@ -31,7 +29,7 @@ nyuad.it.help@nyu.edu
 
 	NOTE: access to /mri-nellab requires completion of (2) above.
 
-7) You'll need to install the MATLAB toolbox for handling .nii files:
+6) You'll need to install the MATLAB toolbox for handling .nii files:
 https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image
 
 # Step 1: Converting to HCP Format.
