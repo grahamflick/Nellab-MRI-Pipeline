@@ -1,26 +1,26 @@
 # Nellab-MRI-Pipeline
 Guidance on processing anatomical MRI data from NYUAD
 
-* Please note that the following instructions are intended for use on a MAC. *
+* Please note that the following instructions are intended for use on a MAC.
 
 # BEFORE YOU START
 
-(1) You will need access to Dalma from the high performance computing cluster team. See here for requesting an account and completing the training:
+1) You will need access to Dalma from the high performance computing cluster team. See here for requesting an account and completing the training:
 https://wikis.nyu.edu/display/ADRC/HPC and https://wikis.nyu.edu/display/ADRC/Accounts
 
 You will need to be somewhat familiar with basic linux commands to navigate Dalma. There are tutorials and other info on the NYUAD HPC wiki above.
 
-(2) You will need to complete Advanced MRI Safety Training for Healthcare Professionals in order to get access to the /mri-nellab server. See here: https://www.appliedradiology.org/courses.aspx. Once complete, email the certificate of completion to Haidee Paterson (hp42@nyu.edu) and Osama Abdullah (osama.abdullah@nyu.edu) and request permission to access the mri-nellab server.
+2) You will need to complete Advanced MRI Safety Training for Healthcare Professionals in order to get access to the /mri-nellab server. See here: https://www.appliedradiology.org/courses.aspx. Once complete, email the certificate of completion to Haidee Paterson (hp42@nyu.edu) and Osama Abdullah (osama.abdullah@nyu.edu) and request permission to access the mri-nellab server.
 
-___ If you do not complete the above two steps, you will be unable to do any of the remaining steps. ___
+**If you do not complete the above two steps, you will be unable to do any of the remaining steps.**
 
-(3) Add the participant to the "MRI_Participant_INFO" document.
+3) Add the participant to the "MRI_Participant_INFO" document.
 
-(4) Add the MRI number and sharing info under "MRI Information" to the NELLAB-AD Participants Google Sheet.
+4) Add the MRI number and sharing info under "MRI Information" to the NELLAB-AD Participants Google Sheet.
 
-(5) Make sure you have a Matlab version beyond 2016a installed on your MAC.
+5) Make sure you have a Matlab version beyond 2016a installed on your MAC.
 
-(6) Make sure that you have the following 2 Drives mounted on your computer:
+6) Make sure that you have the following 2 Drives mounted on your computer:
 
 	smb://rcsfileshare.abudhabi.nyu.edu/mri-nellab
 
@@ -31,7 +31,7 @@ nyuad.it.help@nyu.edu
 
 	NOTE: access to /mri-nellab requires completion of (2) above.
 
-(7) You'll need to install the MATLAB toolbox for handling .nii files:
+7) You'll need to install the MATLAB toolbox for handling .nii files:
 https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image
 
 # Step 1: Converting to HCP Format.
@@ -97,7 +97,7 @@ module load braincore/1.0
 run-pipeline.sh -d /scratch/netid -s A0167 -b prefs -e postfs
 ```
 
-(6) If there are no problems, this means you have successfully started a "job" on the remote Dalma server. You can check the status of this job by typing:
+6) If there are no problems, this means you have successfully started a "job" on the remote Dalma server. You can check the status of this job by typing:
 ```
 squeue -u netid
 ```
@@ -113,7 +113,7 @@ Because this job is running on the remote server, you can close the terminal and
 scp -r netid@dalma.abudhabi.nyu.edu:/scratch/netid/subjectID/T1w/subjectID /Volumes/MEG2/MRI_Data/data/Post_FS/
 ```
 
-(8) You may then want to copy the subject's MRI data from the MEG2 server to your local computer to run coregistration and source estimation.
+8) You may then want to copy the subject's MRI data from the MEG2 server to your local computer to run coregistration and source estimation.
 
 # Step 3: Prep for MEG Source Reconstruction
 
