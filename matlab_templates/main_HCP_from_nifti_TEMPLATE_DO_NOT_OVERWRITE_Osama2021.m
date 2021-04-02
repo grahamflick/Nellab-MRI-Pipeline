@@ -1,25 +1,26 @@
 
-% script to convert Siemens DICOM images to NII format (including DWI data)
-% expecting Osirix-exported sub-folders within the main parent directory
-% for 1 patient
+% script to convert to HCP format data
 clear all
 close all
 clc
 
 %% Users's input 
-modality = '3T'; %specify source of data, 3T, MEG, etc
+modality = '3T'; %specify source of data:'3T' for structurals
 
-% where is source nifti data located?
+%% User Input Required here:
+
+% 1. The source folder: where the data are 
 sourceFolder = '/Volumes/mri/data/nifti_converted/NELLAB/Sub0197_Lp_Structurals'
-subjectId='testOA'; %desired Subject ID (can be different than what came from the MRI)
-targetFolder=['/Users/oa221/Downloads/' subjectId]; % where to save the data 
+% 2. The subject ID upon output: You probably want to set this to be the MEG subject number
+subjectId='testOA';
+% 3. Where you want the data tto be saved. This should probably be /Volumes/MEG2/MRI_Data/data/HCP/{subjectID}
+targetFolder=['/Volumes/MEG2/MRI_Data/data/HCP/' subjectId]; 
 
-% For diffusion
-%% convert what? Choose which are needed:
+%% convert what? Choose which are needed. In most cases both should be set to 1.
 StructrualFlag = 1;
 GRE_Flag =1;
 
-%% Users's input done
+%Users's input done
 
 
 %% Making Directories in Target Folder
